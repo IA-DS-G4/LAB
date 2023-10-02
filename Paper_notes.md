@@ -28,6 +28,6 @@ Airway
 
 
 2- Other information
-Library to work with - **Pyradionics** 
+Library to work with - **Pyradionics** -> Pyradiomics and dicom files: https://pyradiomics.readthedocs.io/en/latest/labs.html
 
   
