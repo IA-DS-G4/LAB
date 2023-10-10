@@ -15,7 +15,7 @@ scans = pl.query(pl.Scan).filter(pl.Scan.slice_thickness <= 1,
 print(scans.count())
 
 
-pid = 'LIDC-IDRI-0078'
+pid = 'LIDC-IDRI-0001'
 scan = pl.query(pl.Scan).filter(pl.Scan.patient_id == pid).first()
 
 print(type(pl.Scan.slice_thickness))
@@ -37,7 +37,7 @@ print(vol.shape)
 
 print("%.2f, %.2f" % (vol.mean(), vol.std()))
 
-#scan.visualize(annotation_groups=nods)
+scan.visualize(annotation_groups=nods)
 
 # class annotation
 #Here I do not know hou to identify the patient
