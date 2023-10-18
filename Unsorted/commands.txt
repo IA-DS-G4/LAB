@@ -1,0 +1,455 @@
+Microsoft Windows [Version 10.0.22621.2428]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Diederik>cd C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: the following arguments are required: --input-image-dir, --input-seg-file, --output-dir
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 pyradiomics-dcm.py --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: pyradiomics-dcm.py dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor "dcm2niix"
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor 'dcm2niix'
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: 'dcm2niix'
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir""C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test" --volume-reconstructor 'dcm2niix'
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: argument --volume-reconstructor: invalid choice: "'dcm2niix'" (choose from 'plastimatch', 'dcm2niix')
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test" --volume-reconstructor dcm2niix
+Error: Input folder invalid: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/shutil.py", line 806, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Diederik\\OneDrive\\Bureaublad\\studie tn\\Minor vakken Porto\\IA CAD\\Images\\manifest-1600709154662\\LIDC-IDRI\\LIDC-IDRI-0001\\01-01-2000-NA-NA-30178\\3000566.000000-NA-03192/volume.nii' -> '/tmp/tmp5d0lkaof/volume.nii'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 405, in main
+    inputImage = dcmImageToNIfTI(args.inputDICOMImageDir, tempDir)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 39, in dcmImageToNIfTI
+    shutil.move(scanNIfTIFile, destScanNIfTIFile)
+  File "/usr/lib/python3.9/shutil.py", line 820, in move
+    copy_function(src, real_dst)
+  File "/usr/lib/python3.9/shutil.py", line 435, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.9/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Diederik\\OneDrive\\Bureaublad\\studie tn\\Minor vakken Porto\\IA CAD\\Images\\manifest-1600709154662\\LIDC-IDRI\\LIDC-IDRI-0001\\01-01-2000-NA-NA-30178\\3000566.000000-NA-03192/volume.nii'
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 python pyradiomics-dcm.py --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: python pyradiomics-dcm.py
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 python pyradiomics-dcm.py --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: python pyradiomics-dcm.py
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 -v --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: -v dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 -v --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: -v dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 python pyradiomics-dcm.py --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: python pyradiomics-dcm.py
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 28.030943 seconds (2.434025 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Error: /data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm not found!
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix --featureDict
+
+------------------------------------------------------------------
+
+docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix --features-dict "/data/GITHUB/LAB/Unsorted/featureDict.tsv"
+
+-----------------------------------------------------------------------------------------
+Microsoft Windows [Version 10.0.22621.2428]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Diederik>cd C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: the following arguments are required: --input-image-dir, --input-seg-file, --output-dir
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 pyradiomics-dcm.py --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: pyradiomics-dcm.py dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor "dcm2niix"
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor 'dcm2niix'
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: 'dcm2niix'
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir""C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test" --volume-reconstructor 'dcm2niix'
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: argument --volume-reconstructor: invalid choice: "'dcm2niix'" (choose from 'plastimatch', 'dcm2niix')
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test" --volume-reconstructor dcm2niix
+Error: Input folder invalid: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/shutil.py", line 806, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Diederik\\OneDrive\\Bureaublad\\studie tn\\Minor vakken Porto\\IA CAD\\Images\\manifest-1600709154662\\LIDC-IDRI\\LIDC-IDRI-0001\\01-01-2000-NA-NA-30178\\3000566.000000-NA-03192/volume.nii' -> '/tmp/tmp5d0lkaof/volume.nii'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 405, in main
+    inputImage = dcmImageToNIfTI(args.inputDICOMImageDir, tempDir)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 39, in dcmImageToNIfTI
+    shutil.move(scanNIfTIFile, destScanNIfTIFile)
+  File "/usr/lib/python3.9/shutil.py", line 820, in move
+    copy_function(src, real_dst)
+  File "/usr/lib/python3.9/shutil.py", line 435, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.9/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Diederik\\OneDrive\\Bureaublad\\studie tn\\Minor vakken Porto\\IA CAD\\Images\\manifest-1600709154662\\LIDC-IDRI\\LIDC-IDRI-0001\\01-01-2000-NA-NA-30178\\3000566.000000-NA-03192/volume.nii'
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 python pyradiomics-dcm.py --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: python pyradiomics-dcm.py
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 python pyradiomics-dcm.py --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: python pyradiomics-dcm.py
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 -v --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: -v dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 -v --input-image-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\pyradiomics converter test"--volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: -v dcm2niix
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 python pyradiomics-dcm.py --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+usage: pyradiomics-dcm.py --input-image <dir> --input-seg <name> --output-sr <name>
+
+Warning: This is a "pyradiomics labs" script, which means it is an experimental feature in development!
+The intent of this helper script is to enable pyradiomics feature extraction directly from/to DICOM data.
+The segmentation defining the region of interest must be defined as a DICOM Segmentation image.
+Support for DICOM Radiotherapy Structure Sets for defining region of interest may be added in the future.
+pyradiomics-dcm.py: error: unrecognized arguments: python pyradiomics-dcm.py
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 28.030943 seconds (2.434025 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Error: /data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm not found!
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000569.000000-Segmentation of Nodule 1 - Annotation IL057127364-71973\1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 21.997440 seconds (2.113939 for core code).
+Error: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\DICOM SEG pid 1-2\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000569.000000-Segmentation of Nodule 1 - Annotation IL057127364-71973\1-1.dcm not found!
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\DICOM SR images\manifest-1585232716547\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 22.022169 seconds (2.134936 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Error: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\DICOM SR images\manifest-1585232716547\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178\3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548\1-1.dcm not found!
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\DICOM SR images\manifest-1585232716547\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178" --output-dir "/data/pyradiomicscconverter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 25.046904 seconds (2.619047 for core code).
+Error: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\DICOM SR images\manifest-1585232716547\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-30178 not found!
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-35511\3000923.000000-NA-62357\1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 24.458575 seconds (2.341252 for core code).
+Error: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-35511\3000923.000000-NA-62357\1-1.dcm not found!
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-35511\3000923.000000-NA-62357\1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Error: Input folder invalid: /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/shutil.py", line 806, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume.nii' -> '/tmp/tmpb5fv5pip/volume.nii'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 405, in main
+    inputImage = dcmImageToNIfTI(args.inputDICOMImageDir, tempDir)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 39, in dcmImageToNIfTI
+    shutil.move(scanNIfTIFile, destScanNIfTIFile)
+  File "/usr/lib/python3.9/shutil.py", line 820, in move
+    copy_function(src, real_dst)
+  File "/usr/lib/python3.9/shutil.py", line 435, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.9/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume.nii'
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-35511\3000923.000000-NA-62357\1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 23.528712 seconds (2.276736 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Error: C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images\manifest-1600709154662\LIDC-IDRI\LIDC-IDRI-0001\01-01-2000-NA-NA-35511\3000923.000000-NA-62357\1-1.dcm not found!
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-35511/3000923.000000-NA-62357/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 22.623582 seconds (2.152600 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.1.1
+Plane Orientation (Patient) is missing, cannot parse input
+ERROR: Failed to get image directions!
+Fatal error encountered.
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 22.826506 seconds (2.274436 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Error: /data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm not found!
+No segments found. Cannot compute features.
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 23.259274 seconds (2.202750 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 8
+Total frames with unique IPP: 8
+Total overlapping frames: 0
+Origin: [-166, -171.7, -125]
+Features dictionary file featuresDict.tsv is not found!
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix --features-dict "/data/featureDict.tsv"
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 22.598150 seconds (2.247692 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 8
+Total frames with unique IPP: 8
+Total overlapping frames: 0
+Origin: [-166, -171.7, -125]
+Features dictionary file /data/featureDict.tsv is not found!
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>docker run -v "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data" d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01 --input-image-dir "/data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192" --input-seg-file "/data/DICOM SEG pid 1-2/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000567.000000-Segmentation of Nodule 1 - Annotation Nodule 001-90548/1-1.dcm" --output-dir "/data/pyradiomics converter test" --volume-reconstructor dcm2niix --features-dict "/data/GITHUB/LAB/Unsorted/featureDict.tsv"
+Compression will be faster with 'pigz' installed
+Chris Rorden's dcm2niiX version v1.0.20230411  GCC10.2.1 x86-64 (64-bit Linux)
+Found 133 DICOM file(s)
+Convert 133 DICOM as /data/Images/manifest-1600709154662/LIDC-IDRI/LIDC-IDRI-0001/01-01-2000-NA-NA-30178/3000566.000000-NA-03192/volume (512x512x133x1)
+Conversion required 24.933480 seconds (2.464334 for core code).
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 8
+Total frames with unique IPP: 8
+Total overlapping frames: 0
+Origin: [-166, -171.7, -125]
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 474, in main
+    featureVector = extractor.execute(
+  File "/usr/local/lib/python3.9/dist-packages/radiomics/featureextractor.py", line 276, in execute
+    boundingBox, correctedMask = imageoperations.checkMask(image, mask, **_settings)
+  File "/usr/local/lib/python3.9/dist-packages/radiomics/imageoperations.py", line 254, in checkMask
+    raise e  # unhandled error
+  File "/usr/local/lib/python3.9/dist-packages/radiomics/imageoperations.py", line 235, in checkMask
+    lsif.Execute(imageNode, maskNode)
+  File "/usr/local/lib/python3.9/dist-packages/SimpleITK/SimpleITK.py", line 37915, in Execute
+    return _SimpleITK.LabelStatisticsImageFilter_Execute(self, image, labelImage)
+RuntimeError: Exception thrown in SimpleITK LabelStatisticsImageFilter_Execute: /tmp/SimpleITK/Code/BasicFilters/src/sitkImageFilter.cxx:61:
+sitk::ERROR: Input "labelImage" for "LabelStatisticsImageFilter" has size of [ 512, 512, 8 ] which does not match the primary input's size of [ 512, 512, 133 ]!
+
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Docker build>
+
