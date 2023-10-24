@@ -69,9 +69,9 @@ def get_features():
                     # add a row with NaN values to the dataframe
                     data.loc[len(data)] = [None] * len(data.columns)
                 # iterating over each segmentation file
-                for file in os.listdir(seg_dir):
+                for file in os.listdir(seg_folder):
                     if file.endswith(".dcm"):
-                        seg_file_path = os.path.join(seg_dir, file)
+                        seg_file_path = os.path.join(seg_folder, file)
                         os.system("docker run -v " + str(docker_save_dir)+ str(docker_hash) + " --input-image-dir " + str(patient_dicom_path) +  " --input-seg-file " + str(seg_file_path) + " --output-dir " + str(pyradiomics_midsave_path) + " --volume-reconstructor dcm2niix --features-dict " +str(features_dict) + " --temp-dir " + str(temp_dir) + " --correct-mask")
                         try:
                             testdata = pd.read_csv("{}/1.csv".format(pyradiomics_midsave_path, file))
