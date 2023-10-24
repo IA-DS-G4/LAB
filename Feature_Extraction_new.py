@@ -61,7 +61,7 @@ def get_features():
             continue
 
         nod = 1
-        annot = 0
+        annot = 1
         for nodule in nods:
             for ann in nodule:
                 backup += 1 #backupcounter
