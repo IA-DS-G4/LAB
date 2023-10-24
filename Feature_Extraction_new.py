@@ -61,8 +61,8 @@ def get_features():
             continue
 
         nod = 1
+        annot = 0
         for nodule in nods:
-            annot = 0
             for ann in nodule:
                 backup += 1 #backupcounter
 
@@ -135,6 +135,8 @@ def get_features():
                 os.chdir(thisdir)
 
                 annot += 1
+                if annot > len(patient_seg_folders):
+                    continue
             nod += 1
     os.chdir(parent_dir)
 
