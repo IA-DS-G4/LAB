@@ -8,7 +8,7 @@ import pydicom
 
 def get_features():
     # put path of dataset here
-    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
+    parent_dir = r"C:\\Users\\Diederik\\OneDrive\\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
@@ -72,8 +72,8 @@ def get_features():
                 for file in os.listdir(seg_folder):
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
-                        os.system("docker run -v " + docker_save_dir + " " + docker_hash + " --input-image-dir " + patient_dicom_path +  " --input-seg-file " + seg_file_path + " --output-dir " + pyradiomics_midsave_path + " --volume-reconstructor dcm2niix --features-dict " +features_dict + " --temp-dir " + temp_dir + " --correct-mask")
-                        print("docker run -v " + docker_save_dir + " " + docker_hash + " --input-image-dir " + patient_dicom_path +  " --input-seg-file " + seg_file_path + " --output-dir " + pyradiomics_midsave_path + " --volume-reconstructor dcm2niix --features-dict " +features_dict + " --temp-dir " + temp_dir + " --correct-mask")
+                        os.system("docker run -v \"" + docker_save_dir + "\" " + docker_hash + " --input-image-dir \"" + patient_dicom_path +  "\" --input-seg-file \"" + seg_file_path + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"" +features_dict + "\" --temp-dir \"" + temp_dir + "\" --correct-mask")
+                        #print("docker run -v " + docker_save_dir + " " + docker_hash + " --input-image-dir " + patient_dicom_path +  " --input-seg-file " + seg_file_path + " --output-dir " + pyradiomics_midsave_path + " --volume-reconstructor dcm2niix --features-dict " +features_dict + " --temp-dir " + temp_dir + " --correct-mask")
                         try:
                             pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
