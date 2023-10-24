@@ -114,7 +114,7 @@ def get_features():
 
                 # create feature vector
                 feature = list(ann.feature_vals())
-                feature.insert(0, annot + 1)
+                feature.insert(0, annot)
                 feature.insert(0, nod)
                 feature.insert(0, p_id)
                 dataframe.loc[len(dataframe)] = feature
