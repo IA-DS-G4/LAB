@@ -23,7 +23,7 @@ def get_features():
     pyradiomics_midsave_path = r"/data/pyradiomics converter test"
     # temporal dir
     temp_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file"
-
+    iteration_counter = 1
 
 
     data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\features.csv")
@@ -35,6 +35,7 @@ def get_features():
                  'Margin', 'Lobulation', 'Spiculation', 'Texture', 'Malignancy'])
     backup = 0
     for p_id in df['Patient_ID']:
+        print("Patient " + str(p_id) + "Processing")
         if os.path.isdir(os.path.join(data_dir, str(p_id))) == False:
             print("Patient " + str(p_id) + " not found")
             continue  # if the patient folder doesn't exist, skip it
@@ -58,8 +59,8 @@ def get_features():
         # get all seg folders for nodules later
 
 
-        if scan is None: # if the scan is not available we continue
-            continue
+        #if scan is None: # if the scan is not available we continue
+        #    continue
 
         nod = 1
         annot = 1
@@ -69,6 +70,7 @@ def get_features():
                     continue
                 backup += 1 #backupcounter
 
+                iteration_counter += 1
                 seg_folder = os.path.join(patient_folders, patient_seg_folders[annot])
 
                 # check how many files are in the segmentation folder
@@ -80,10 +82,11 @@ def get_features():
                 for file in os.listdir(seg_folder):
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
-                        print('Using the docker command:' + "docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask")
+                        #print('Using the docker command:' + "docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask")
                         os.system("docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask")
+
                         try:
-                            pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
+                            pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file\Features"
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
                             print(testdata)
                             # append data to features.csv
@@ -121,11 +124,11 @@ def get_features():
 
                 thisdir = os.getcwd()
 
-                # create a backup of the dataframes every 10 iterations (every 10 annotations)
-                if backup % 20 == 0:
-                    # METAM AQUI O CAMINHO PARA A PASTA ONDE QUEREM QUE O BACKUP SEJA GUARDADO
+                # create a backup of the dataframes every 5 iterations (every 5 annotations)
+                if backup % 10 == 0:
 
-                    os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\test\Backups")
+                    print('Iteration:' + str(iteration_counter) + 'Backup created')
+                    os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Backups")
 
                     data.to_csv("pyradiomicsBackup.csv", index=False)
                     dataframe.to_csv("pylidcBackup.csv", index=False)
