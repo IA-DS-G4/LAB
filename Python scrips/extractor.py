@@ -12,8 +12,6 @@ if os.getcwd().split("\\")[-1] != "BatchExtractor":
 
 
 data = pd.read_csv("features.csv")
-print(data)
-print()
 
 # grab all the patient IDs
 df = pd.read_excel("nodule_counts_by_patient.xlsx")
