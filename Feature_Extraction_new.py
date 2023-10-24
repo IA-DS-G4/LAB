@@ -83,11 +83,10 @@ def get_features():
                         print('Using the docker command:' + "docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask")
                         os.system("docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask")
                         try:
-                            pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
-                            testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
+                            testdata = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features\1.csv")
                             print(testdata)
                             # append data to features.csv
-                            data = df.data.append(testdata)
+                            data = data.append(testdata)
 
                             # save the data dataframe to a csv file (backup for every iteration) in the main directory
                             # thisdir = os.getcwd()
@@ -122,8 +121,7 @@ def get_features():
                 thisdir = os.getcwd()
 
                 # create a backup of the dataframes every 10 iterations (every 10 annotations)
-                if backup % 20 == 0:
-                    # METAM AQUI O CAMINHO PARA A PASTA ONDE QUEREM QUE O BACKUP SEJA GUARDADO
+                if backup % 10 == 0:
 
                     os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\test\Backups")
 
