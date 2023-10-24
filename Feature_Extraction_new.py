@@ -13,7 +13,7 @@ def get_features():
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
-    docker_save_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data"
+    docker_save_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD"
     # give the hash of the pyradiomnics docker
     docker_hash = r"d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01"
     # path to the features dict
@@ -73,10 +73,8 @@ def get_features():
                 for file in os.listdir(seg_folder):
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
-                        os.system("docker run -v \"" + docker_save_dir + "\" " + docker_hash + " --input-image-dir \"" + patient_dicom_path +  "\" --input-seg-file \"" + seg_file_path + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"" +features_dict + "\" --temp-dir \"" + temp_dir + "\" --correct-mask")
-                        print(
-                            "docker run -v \"" + docker_save_dir + "\" " + docker_hash + " --input-image-dir \"" + patient_dicom_path + "\" --input-seg-file \"" + seg_file_path + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"" + features_dict + "\" --temp-dir \"" + temp_dir + "\" --correct-mask")
-                        try:
+                        os.system("docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir) +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir) + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir) + "\" --temp-dir \"" + temp_dir + "\" --correct-mask")
+                       try:
                             pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
                             print(testdata)
