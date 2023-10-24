@@ -116,7 +116,7 @@ def get_features():
                 thisdir = os.getcwd()
 
                 # create a backup of the dataframes every 10 iterations (every 10 annotations)
-                if maisumcounter % 10 == 0:
+                if backup % 20 == 0:
                     # METAM AQUI O CAMINHO PARA A PASTA ONDE QUEREM QUE O BACKUP SEJA GUARDADO
 
                     os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\test\Backups")
