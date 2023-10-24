@@ -90,7 +90,7 @@ def get_features():
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
                             print(testdata)
                             # append data to features.csv
-                            data = df.data.append(testdata)
+                            data = data.append(testdata)
 
                             # save the data dataframe to a csv file (backup for every iteration) in the main directory
                             # thisdir = os.getcwd()
@@ -125,9 +125,9 @@ def get_features():
                 thisdir = os.getcwd()
 
                 # create a backup of the dataframes every 5 iterations (every 5 annotations)
-                if backup % 10 == 0:
+                if backup % 5 == 0:
 
-                    print('Iteration:' + str(iteration_counter) + 'Backup created')
+                    print('Iteration: ' + str(iteration_counter) + '-----Backup created------------------------------------------------------------------')
                     os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Backups")
 
                     data.to_csv("pyradiomicsBackup.csv", index=False)
