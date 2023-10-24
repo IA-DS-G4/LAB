@@ -49,6 +49,9 @@ def get_features():
         patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
         # listing all the folders from a patient
         patient_seg_folders = os.listdir(patient_folders)
+        for folder in patient_seg_folders:
+            if "evaluations" in folder:
+                os.rmdir(os.path.join(patient_folders,folder))
         # saving the dicom images folder path
         # get all seg folders for nodules later
 
@@ -56,14 +59,12 @@ def get_features():
         if scan is None: # if the scan is not available we continue
             continue
         nod = 1
-        annot = 1
+        annot = 0
 
         for nodule in nods:
             for ann in nodule:
                 backup += 1 #backupcounter
 
-                if "evaluations" in patient_seg_folders[annot]:
-                    annot += 1
                 seg_folder = os.path.join(patient_folders, patient_seg_folders[annot])
 
                 # check how many files are in the segmentation folder
