@@ -43,6 +43,6 @@ def get_ROI_Dicom(store_path):
             ds.save_as(outputpath)
 
 
-#store_path = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\ROI extraction"
-store_path = "/home/elias88348/PycharmProjects/LIDC/annotation_dicom#"
+store_path = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\ROI extraction"
+#store_path = "/home/elias88348/PycharmProjects/LIDC/annotation_dicom#"
 get_ROI_Dicom(store_path)
