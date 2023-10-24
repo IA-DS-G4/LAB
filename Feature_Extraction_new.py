@@ -44,14 +44,12 @@ def get_features():
         # path to the patient folder
         patient_dir = os.path.join(data_dir, str(p_id))
         # path to dicom ct-scans of patient
-        #patient_dicom_path = scan.get_path_to_dicom_files()
+        patient_dicom_path = scan.get_path_to_dicom_files()
         patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
         # listing all the folders from a patient
-        insides = os.listdir(patient_folders)
+        patient_seg_folders = os.listdir(patient_folders)
         # saving the dicom images folder path
-        patient_dicom_path = os.path.join(patient_folders, insides[-1])
         # get all seg folders for nodules later
-        patient_seg_folders = os.listdir(patient_dicom_path)
         print(patient_dicom_path)
 
         if scan is None: # if the scan is not available we continue
@@ -63,7 +61,7 @@ def get_features():
             for ann in nodule:
                 backup += 1 #backupcounter
 
-                seg_folder = os.path.join(patient_dicom_path, patient_seg_folders[annot])
+                seg_folder = os.path.join(patient_folders, patient_seg_folders[annot])
 
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
