@@ -53,6 +53,7 @@ def get_features():
         for folder in patient_seg_folders:
             if "evaluations" in folder:
                 shutil.rmtree(os.path.join(patient_folders,folder))
+        patient_seg_folders = os.listdir(patient_folders)
         # saving the dicom images folder path
         # get all seg folders for nodules later
 
