@@ -5,6 +5,7 @@ import os
 import matplotlib
 import matplotlib.pyplot as plt
 import pydicom
+import shutil
 
 def get_features():
     # put path of dataset here
@@ -51,7 +52,7 @@ def get_features():
         patient_seg_folders = os.listdir(patient_folders)
         for folder in patient_seg_folders:
             if "evaluations" in folder:
-                os.rmdir(os.path.join(patient_folders,folder))
+                shutil.rmtree(os.path.join(patient_folders,folder))
         # saving the dicom images folder path
         # get all seg folders for nodules later
 
