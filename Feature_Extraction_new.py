@@ -91,7 +91,7 @@ def get_features():
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
                             print(testdata)
                             # append data to features.csv
-                            print(data.info())
+                            #print(data.info())
                             data = data.append(testdata)
                             print(data)
 
