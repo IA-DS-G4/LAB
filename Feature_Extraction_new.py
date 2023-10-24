@@ -59,10 +59,10 @@ def get_features():
 
         if scan is None: # if the scan is not available we continue
             continue
-        nod = 1
-        annot = 0
 
+        nod = 1
         for nodule in nods:
+            annot = 0
             for ann in nodule:
                 backup += 1 #backupcounter
 
