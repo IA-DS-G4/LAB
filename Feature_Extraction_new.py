@@ -73,6 +73,7 @@ def get_features():
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
                         os.system("docker run -v " + docker_save_dir + " " + docker_hash + " --input-image-dir " + patient_dicom_path +  " --input-seg-file " + seg_file_path + " --output-dir " + pyradiomics_midsave_path + " --volume-reconstructor dcm2niix --features-dict " +features_dict + " --temp-dir " + temp_dir + " --correct-mask")
+                        print("docker run -v " + docker_save_dir + " " + docker_hash + " --input-image-dir " + patient_dicom_path +  " --input-seg-file " + seg_file_path + " --output-dir " + pyradiomics_midsave_path + " --volume-reconstructor dcm2niix --features-dict " +features_dict + " --temp-dir " + temp_dir + " --correct-mask")
                         try:
                             pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
