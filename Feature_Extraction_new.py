@@ -9,7 +9,7 @@ import pydicom
 def get_features():
     # put path of dataset here
     parent_dir = r"C:\\Users\\Diederik\\OneDrive\\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
-    parent_dir_mount = r"/data/Images+seg/manifest-1698154951594/LIDC-IDRI"
+    patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698154951594/LIDC-IDRI"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
