@@ -8,7 +8,7 @@ import pydicom
 
 def get_features():
     # put path of dataset here
-    parent_dir = r"C:\\Users\\Diederik\\OneDrive\\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
+    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
     patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698154951594/LIDC-IDRI"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
@@ -21,12 +21,12 @@ def get_features():
     # pyradiomics save folder
     pyradiomics_midsave_path = r"/data/pyradiomics converter test"
     # temporal dir
-    temp_dir = r"/data/Pyrad temp folder"
+    temp_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file"
 
 
 
-    data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\test\features.csv")
-    df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\test\nodule_counts_by_patient.xlsx")
+    data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\features.csv")
+    df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\nodule_counts_by_patient.xlsx")
     df = df.drop(df.columns[[4, 5]], axis=1)
     df.columns = ['Patient_ID', 'Total_Nodule_Count', 'NodG3','NodL3']
     dataframe = pd.DataFrame(
@@ -74,7 +74,7 @@ def get_features():
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
                         os.system("docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir) +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir) + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir) + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir) + "\" --correct-mask")
-                       try:
+                        try:
                             pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
                             print(testdata)
