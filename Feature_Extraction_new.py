@@ -74,9 +74,11 @@ def get_features():
                         seg_file_path = os.path.join(seg_folder, file)
                         os.system("docker run -v " + str(docker_save_dir)+ str(docker_hash) + " --input-image-dir " + str(patient_dicom_path) +  " --input-seg-file " + str(seg_file_path) + " --output-dir " + str(pyradiomics_midsave_path) + " --volume-reconstructor dcm2niix --features-dict " +str(features_dict) + " --temp-dir " + str(temp_dir) + " --correct-mask")
                         try:
-                            testdata = pd.read_csv("{}/1.csv".format(pyradiomics_midsave_path, file))
+                            pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
+                            testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
+                            print(testdata)
                             # append data to features.csv
-                            data = data.append(testdata)
+                            data = df.data.append(testdata)
 
                             # save the data dataframe to a csv file (backup for every iteration) in the main directory
                             # thisdir = os.getcwd()
@@ -91,7 +93,7 @@ def get_features():
                             # write to a log file the patient name, the seg folder name and the file name
                             log = open("log.txt", "a")
                             log.write("Failed to extract features from: " + os.getcwd() + "\n")
-                            log.write("SEG File: " + file_path + "\n\n")
+                            log.write("SEG File: " + file + "\n\n")
                             os.chdir(thisdir)
                             continue
                         # delete temp folder
