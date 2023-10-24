@@ -8,11 +8,11 @@ import pydicom
 
 def get_features(pid_start,pid_end):
     # put path of dataset here
-    parent_dir = "/home/elias88348/PycharmProjects/LIDC/downloads/TCIA_LIDC-IDRI_20200921"
+    parent_dir = r"/home/elias88348/PycharmProjects/LIDC/downloads/TCIA_LIDC-IDRI_20200921"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(root_path, "LIDC-IDRI")
     # give directory where docker saves files
-    docker_save_dir = "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data
+    docker_save_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data
     # give the hash of the pyradiomnics docker
     docker_hash = "d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01"
     # path to the features dict

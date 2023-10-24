@@ -8,29 +8,32 @@ import pydicom
 
 def get_features():
     # put path of dataset here
-    parent_dir = "/home/elias88348/PycharmProjects/LIDC/downloads/TCIA_LIDC-IDRI_20200921"
+    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
     # get path of LIDC-IDRI directionary
-    data_dir = os.path.join(root_path, "LIDC-IDRI")
+    data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
-    docker_save_dir = "C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data
+    docker_save_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD:/data"
     # give the hash of the pyradiomnics docker
-    docker_hash = "d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01"
+    docker_hash = r"d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01"
     # path to the features dict
-    features_dict = "/data/Docker build/labs/pyradiomics-dcm/resources/featuresDict_IBSIv7.tsv"
+    features_dict = r"/data/Docker build/labs/pyradiomics-dcm/resources/featuresDict_IBSIv7.tsv"
     # pyradiomics save folder
-    pyradiomics_midsave_path = "/data/pyradiomics converter test"
+    pyradiomics_midsave_path = r"/data/pyradiomics converter test"
     # temporal dir
-    temp_dir = "/data/Pyrad temp folder"
+    temp_dir = r"/data/Pyrad temp folder"
 
 
-    data = pd.read_csv("features.csv")
-    df = pd.read_csv("Patientids_over3mm.csv")
+
+    data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\test\features.csv")
+    df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\test\nodule_counts_by_patient.xlsx")
+    df = df.drop(df.columns[[4, 5]], axis=1)
+    df.columns = ['Patient_ID', 'Total_Nodule_Count', 'NodG3','NodL3']
     dataframe = pd.DataFrame(
         columns=['Patient_ID', 'Nodule', ' Annotation', 'Subtlety', 'InternalStructure', 'Calcification', 'Sphericity',
                  'Margin', 'Lobulation', 'Spiculation', 'Texture', 'Malignancy'])
     backup = 0
     for p_id in df['Patient_ID']:
-        if os.path.isdir(os.path.join(root_path, str(p_id))) == False:
+        if os.path.isdir(os.path.join(data_dir, str(p_id))) == False:
             print("Patient " + str(p_id) + " not found")
             continue  # if the patient folder doesn't exist, skip it
 
@@ -41,9 +44,15 @@ def get_features():
         # path to the patient folder
         patient_dir = os.path.join(data_dir, str(p_id))
         # path to dicom ct-scans of patient
-        patient_dicom_path = scan.get_path_to_dicom_files()
+        #patient_dicom_path = scan.get_path_to_dicom_files()
+        patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
+        # listing all the folders from a patient
+        insides = os.listdir(patient_folders)
+        # saving the dicom images folder path
+        patient_dicom_path = os.path.join(patient_folders, insides[-1])
         # get all seg folders for nodules later
         patient_seg_folders = os.listdir(patient_dicom_path)
+        print(patient_dicom_path)
 
         if scan is None: # if the scan is not available we continue
             continue
@@ -54,7 +63,7 @@ def get_features():
             for ann in nodule:
                 backup += 1 #backupcounter
 
-                seg_folder = os.path.join(patient_dir, patient_seg_folders[annot])
+                seg_folder = os.path.join(patient_dicom_path, patient_seg_folders[annot])
 
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
@@ -107,7 +116,7 @@ def get_features():
                 if maisumcounter % 10 == 0:
                     # METAM AQUI O CAMINHO PARA A PASTA ONDE QUEREM QUE O BACKUP SEJA GUARDADO
 
-                    os.chdir("C:\\Users\\pedro\\Documents\\Code\\LungCancerFound\\Backups")
+                    os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\test\Backups")
 
                     data.to_csv("pyradiomicsBackup.csv", index=False)
                     dataframe.to_csv("pylidcBackup.csv", index=False)
@@ -133,3 +142,8 @@ def get_features():
     df3 = pd.concat([df1, df2], axis=1)
 
     df3.to_csv("total_data_obliteration.csv", index=False)
+
+
+
+
+get_features()
