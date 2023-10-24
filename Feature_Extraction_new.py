@@ -51,12 +51,12 @@ def get_features():
         patient_seg_folders = os.listdir(patient_folders)
         # saving the dicom images folder path
         # get all seg folders for nodules later
-        print(patient_dicom_path)
+
 
         if scan is None: # if the scan is not available we continue
             continue
         nod = 1
-        annot = 0
+        annot = 1
 
         for nodule in nods:
             for ann in nodule:
@@ -73,7 +73,8 @@ def get_features():
                 for file in os.listdir(seg_folder):
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
-                        os.system("docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path.replace("\\\\","/"), docker_save_dir.replace("\\\\","/")) +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path.replace("\\\\","/"), docker_save_dir.replace("\\\\","/")) + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace("\\\\","/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir.replace("\\\\","/"), docker_save_dir.replace("\\\\","/")) + "\" --correct-mask")
+
+                        os.system("docker run -v \"" + docker_save_dir + ":/data" + "\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask")
                         try:
                             pyradiomics_midsave_path = r"C:\Users\Diederik\OneDrive\Bureaublad\test\temp file\Features"
                             testdata = pd.read_csv(r"{}\1.csv".format(pyradiomics_midsave_path))
