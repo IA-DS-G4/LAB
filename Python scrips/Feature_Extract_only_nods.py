@@ -64,11 +64,13 @@ def get_features():
         #    continue
 
         nod = 1
+        nodule_processed = 1
         for nodule in nods:
             backup += 1 #backupcounter
             ann = nodule[0]
             iteration_counter += 1
-            if "Nodule {}".format(nod) in patient_seg_folders[nod]:
+            if "Nodule {}".format(nodule_processed) in patient_seg_folders[nod]:
+                nodule_processed+= 1
                 seg_folder = os.path.join(patient_folders, patient_seg_folders[nod])
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
