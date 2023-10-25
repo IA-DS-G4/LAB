@@ -64,15 +64,12 @@ def get_features():
         #    continue
 
         nod = 1
-        annot = 1
         for nodule in nods:
-            for ann in nodule:
-                if annot >= len(patient_seg_folders):
-                    continue
-                backup += 1 #backupcounter
-
-                iteration_counter += 1
-                seg_folder = os.path.join(patient_folders, patient_seg_folders[annot])
+            backup += 1 #backupcounter
+            ann = nodule[0]
+            iteration_counter += 1
+            if "Nodule {}".format(nod) in patient_seg_folders[nod]:
+                seg_folder = os.path.join(patient_folders, patient_seg_folders[nod])
 
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
@@ -91,8 +88,12 @@ def get_features():
                             print(testdata)
                             # append data to features.csv
                             print(data.info())
+                            common_columns = testdata.columns.intersection(data.columns)
+
+                            # Append only the relevant columns from df2 to df1
+                            data = pd.concat([data, testdata[common_columns]], axis=1)
                             #data = data.append(testdata)
-                            data = pd.concat([data, testdata], ignore_index=True)
+                            #data = pd.concat([data, testdata], ignore_index=True)
 
                             print(data)
 
@@ -117,7 +118,7 @@ def get_features():
 
                 # create feature vector
                 feature = list(ann.feature_vals())
-                feature.insert(0, annot)
+                feature.insert(0, ann.id)
                 feature.insert(0, nod)
                 feature.insert(0, p_id)
                 dataframe.loc[len(dataframe)] = feature
@@ -139,8 +140,6 @@ def get_features():
                     df3 = pd.concat([df1, df2], axis=1)
                     df3.to_csv("total_data_obliterationBackup.csv", index=False)
                 os.chdir(thisdir)
-
-                annot += 1
             nod += 1
     os.chdir(parent_dir)
 
