@@ -100,8 +100,8 @@ def get_features():
                             print(data)
                             #keeping track of runtime
                             current_time = time.time()
-                            runtime = end_time - start_time
-                            print(runtime)
+                            runtime = current_time - start_time
+                            print('Runtime: ' + str(runtime) + 'seconds' )
 
                         except:
                             # append a row with NaN values to the dataframe
