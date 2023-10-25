@@ -2,11 +2,20 @@ import pandas as pd
 import numpy as np
 #import scikit-learn
 
-
-column_header = pd.read_csv("../pylidc/pyradiomicsBackup_25_10_2023.csv",nrows=1)
-column_names = column_header.columns[]
-print(column_names)
-data = pd.read_csv("../pylidc/pyradiomicsBackup_25_10_2023.csv", usecols=column_names, header= 0)
+data = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/pyradiomicsBackup_25_10_2023.csv")
 data = data.select_dtypes(include=[int, float])
+pl_data = pd.read_csv("../pylidc/pylidc_csv.csv")
+pl_data= pl_data.select_dtypes(include=[int, float])
+print(pl_data.columns.tolist())
+df = pd.concat([pl_data, data], axis=1)
 
-normalized_data = (data- data.min())
+def normalize_data(df):
+    normalized_data = (df-df.min())/(df.max()-df.min())
+    return normalized_data
+
+#fs_df = df
+#fs_df = fs_df.drop(fs_df[fs_df['malignancy'] == 3].index)
+
+
+
+df_norm = normalize_data(df)
