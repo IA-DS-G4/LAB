@@ -70,7 +70,6 @@ def get_features():
             iteration_counter += 1
             if "Nodule {}".format(nod) in patient_seg_folders[nod]:
                 seg_folder = os.path.join(patient_folders, patient_seg_folders[nod])
-            else: continue
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
                 if len(seg_files) == 0:
@@ -140,7 +139,8 @@ def get_features():
                     df3 = pd.concat([df1, df2], axis=1)
                     df3.to_csv("total_data_obliterationBackup.csv", index=False)
                 os.chdir(thisdir)
-            nod += 1
+                nod += 1
+            else: continue
     os.chdir(parent_dir)
 
     dataframe.to_csv("pylidc.csv", index=False)
