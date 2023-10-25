@@ -6,6 +6,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pydicom
 import shutil
+import time
 
 def get_features():
     # put path of dataset here
@@ -36,6 +37,9 @@ def get_features():
                  'Margin', 'Lobulation', 'Spiculation', 'Texture', 'Malignancy'])
     backup = 0
     for p_id in df['Patient_ID']:
+        start_time = time.time()
+
+
         print("Patient " + str(p_id) + "Processing")
         if os.path.isdir(os.path.join(data_dir, str(p_id))) == False:
             print("Patient " + str(p_id) + " not found")
@@ -93,9 +97,11 @@ def get_features():
                             print(data.info())
                             #data = data.append(testdata)
                             data = pd.concat([data, testdata], ignore_index=True)
-
                             print(data)
-
+                            #keeping track of runtime
+                            current_time = time.time()
+                            runtime = end_time - start_time
+                            print(runtime)
 
                             # save the data dataframe to a csv file (backup for every iteration) in the main directory
                             # thisdir = os.getcwd()
@@ -160,7 +166,11 @@ def get_features():
 
     df3.to_csv("total_data_obliteration.csv", index=False)
 
-
-
-
 get_features()
+
+#keeping track of runtime
+if __name__ == "get_features":
+    start_time = time.time()
+    end_time = time.time()
+    runtime = end_time - start_time
+    print(f"Script executed in {runtime:.2f} seconds")
