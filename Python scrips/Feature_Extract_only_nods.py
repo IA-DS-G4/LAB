@@ -70,7 +70,7 @@ def get_features():
             iteration_counter += 1
             if "Nodule {}".format(nod) in patient_seg_folders[nod]:
                 seg_folder = os.path.join(patient_folders, patient_seg_folders[nod])
-
+            else: continue
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
                 if len(seg_files) == 0:
