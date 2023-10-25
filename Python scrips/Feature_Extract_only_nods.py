@@ -6,7 +6,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pydicom
 import shutil
-import time
 
 def get_features():
     # put path of dataset here
@@ -37,9 +36,6 @@ def get_features():
                  'Margin', 'Lobulation', 'Spiculation', 'Texture', 'Malignancy'])
     backup = 0
     for p_id in df['Patient_ID']:
-        start_time = time.time()
-
-
         print("Patient " + str(p_id) + "Processing")
         if os.path.isdir(os.path.join(data_dir, str(p_id))) == False:
             print("Patient " + str(p_id) + " not found")
@@ -68,15 +64,12 @@ def get_features():
         #    continue
 
         nod = 1
-        annot = 1
         for nodule in nods:
-            for ann in nodule:
-                if annot >= len(patient_seg_folders):
-                    continue
-                backup += 1 #backupcounter
-
-                iteration_counter += 1
-                seg_folder = os.path.join(patient_folders, patient_seg_folders[annot])
+            backup += 1 #backupcounter
+            ann = nodule[0]
+            iteration_counter += 1
+            if "Nodule {}".format(nod) in patient_seg_folders[nod]:
+                seg_folder = os.path.join(patient_folders, patient_seg_folders[nod])
 
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
@@ -95,13 +88,15 @@ def get_features():
                             print(testdata)
                             # append data to features.csv
                             print(data.info())
+                            common_columns = testdata.columns.intersection(data.columns)
+
+                            # Append only the relevant columns from df2 to df1
+                            data = pd.concat([data, testdata[common_columns]], axis=1)
                             #data = data.append(testdata)
-                            data = pd.concat([data, testdata], ignore_index=True)
+                            #data = pd.concat([data, testdata], ignore_index=True)
+
                             print(data)
-                            #keeping track of runtime
-                            current_time = time.time()
-                            runtime = end_time - start_time
-                            print(runtime)
+
 
                         except:
                             # append a row with NaN values to the dataframe
@@ -123,7 +118,7 @@ def get_features():
 
                 # create feature vector
                 feature = list(ann.feature_vals())
-                feature.insert(0, annot)
+                feature.insert(0, ann.id)
                 feature.insert(0, nod)
                 feature.insert(0, p_id)
                 dataframe.loc[len(dataframe)] = feature
@@ -145,8 +140,6 @@ def get_features():
                     df3 = pd.concat([df1, df2], axis=1)
                     df3.to_csv("total_data_obliterationBackup.csv", index=False)
                 os.chdir(thisdir)
-
-                annot += 1
             nod += 1
     os.chdir(parent_dir)
 
@@ -161,11 +154,7 @@ def get_features():
 
     df3.to_csv("total_data_obliteration.csv", index=False)
 
-get_features()
 
-#keeping track of runtime
-if __name__ == "get_features":
-    start_time = time.time()
-    end_time = time.time()
-    runtime = end_time - start_time
-    print(f"Script executed in {runtime:.2f} seconds")
+
+
+get_features()
