@@ -23,6 +23,10 @@ def LSVC(X,Y,epochs, test_size):
         acc_array = np.append(acc_array, accuracy)
         print("Accuracy:", accuracy)
 
+
+    #calculate average accurcy
+    mean_acc = np.mean(acc_array)
+
     #make a plot
     plt.plot(e, acc_array)
     plt.rcParams['font.size'] = '11'
@@ -31,8 +35,9 @@ def LSVC(X,Y,epochs, test_size):
     plt.legend()
     plt.xlabel('epoch')
     plt.ylabel('accuracy')
+    plt.axhline(mean_acc, color='red', linestyle='dashed', label='Mean accuracy')
     plt.show()
     return
 
-LSVC(X,Y,10, 0.1)
+LSVC(X,Y,100, 0.2)
 
