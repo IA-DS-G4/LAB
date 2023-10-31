@@ -79,7 +79,7 @@ def get_features():
 
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
-                if len(seg_files) == 0:
+                if len(seg_files) <= 0:
                     # add a row with NaN values to the dataframe
                     data.loc[len(data)] = [None] * len(data.columns)
                 # iterating over each segmentation file
