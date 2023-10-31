@@ -83,10 +83,12 @@ df_norm = normalize_data(df)
 
 
 # Creating the ML Dataset
-X = df.drop(columns=["Category"])  # X contains all columns except "Category"
-y = df["Category"]  # y is the "Catego# ry" column
+X = df_norm.drop(columns=["Category","Malignancy"])  # X contains all columns except "Category"
+y = df["Category"]  # y is the "Category" column
 
 X_new, f_statistic, p_values = f_selection_KBest(X,y)
+
+feature_select_plot(f_statistic,p_values)
 
 X_new_df = pd.DataFrame(X_new)
 print(X_new_df)
