@@ -5,8 +5,8 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 from matplotlib import pyplot as plt
 
-X = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\Python scrips\ML pyradiomics\X.csv")
-Y = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\Python scrips\ML pyradiomics\y.csv")
+X = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/ML_Data/X.csv")
+Y = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/ML_Data/y.csv")
 
 #divide training and test data
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.1, random_state=42)
