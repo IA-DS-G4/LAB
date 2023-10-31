@@ -28,7 +28,6 @@ def get_features():
 
 
     data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\features.csv")
-    
     df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\nodule_counts_by_patient.xlsx")
     df = df.drop(df.columns[[4, 5]], axis=1)
     df.columns = ['Patient_ID', 'Total_Nodule_Count', 'NodG3','NodL3']
@@ -46,10 +45,6 @@ def get_features():
         nods = scan.cluster_annotations()
 
 
-        if scan is None: # if the scan is not available we continue
-            continue
-
-
         # path to the patient folder
         patient_dir = os.path.join(data_dir, str(p_id))
         # path to dicom ct-scans of patient
@@ -64,6 +59,9 @@ def get_features():
         # saving the dicom images folder path
         # get all seg folders for nodules later
 
+
+        #if scan is None: # if the scan is not available we continue
+        #    continue
 
         nod = 1
         nodule_processed = 1

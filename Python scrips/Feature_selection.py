@@ -1,29 +1,42 @@
 import pandas as pd
 import numpy as np
-#import scikit-learn
+from sklearn.feature_selection import VarianceThreshold
 
-data = pd.read_csv("../Unsorted/Data files/intermediate result pydiacom_25_10_2023/total_data_obliterationBackup.csv")
-data = data.select_dtypes(include=[int, float])
-pl_data = pd.read_csv("../Unsorted/Data files/intermediate result pydiacom_25_10_2023/pylidcBackup.csv")
-pl_data= pl_data.select_dtypes(include=[int, float])
-print(pl_data.columns.tolist())
-df = pd.concat([pl_data, data], axis=1)
-dft = df.copy() # make a test copy of the dataframe
+#-loading data-> backup of 29/10/2023
+#pyradiomics data
+pr_data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\pyradiomicsBackup.csv")
 
+#pylidc data
+pl_data = pd.read_csv("../pylidc/pylidc_csv.csv")
 
-#moving rows up after the 11th column because its how the feature extractor stores it
-dft.iloc[:, 12:] = df.iloc[:, 11:].values
-
-print(dft.iloc[:, 40:50])
-#print(df)
+#total obliteration data
+tot_data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\total_data_obliterationBackup.csv")
 
 
+#code for dropping columns manually
+# 0-17, 19,20,21,22,23,27,28,29,30,31
+#columns_to_drop = np.arange(0,7)
+#columns_to_drop = np.append(columns_to_drop, [])
+#print(columns_to_drop)
+tot_data = pr_data.select_dtypes(include=[int, float])
+#tot_data.drop(columns=tot_data.columns[columns_to_drop],inplace=True)
+tot_data.to_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\filewip.csv", index=False)
+print(tot_data)
+
+#drop row where malignancy is 3
+tot_data = tot_data.drop(tot_data[tot_data['malignancy'] == 3].index)
+
+#normalizing data
 def normalize_data(df):
     normalized_data = (df-df.min())/(df.max()-df.min())
     return normalized_data
 
-fs_df = df
-#fs_df = fs_df.drop(fs_df[fs_df['Malignancy'] == 3].index)
+tot_data_norm = normalize_data(tot_data)
+print(pr_data_norm)
+
+#getting rid of features with low variance
+sel = VarianceThreshold(threshold=0)
+sel.fit_transform(tot_data)
+print(tot_data)
 
 
-df_norm = normalize_data(df)
