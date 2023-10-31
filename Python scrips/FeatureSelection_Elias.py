@@ -83,6 +83,7 @@ df_norm = normalize_data(df)
 # Creating the ML Dataset
 X = df_norm.drop(columns=["Category","Malignancy"])  # X contains all columns except "Category"
 y = df["Category"]  # y is the "Category" column
+y_alt = df["Malignancy"]
 
 X_new, f_statistic, p_values = f_selection_Percentile(X,y)
 
@@ -98,3 +99,4 @@ X_new_df = pd.DataFrame(X_new)
 
 X_new_df.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/X.csv", index=False)
 y.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/y.csv", index=False)
+y_alt.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/y_alt.csv", index=False)
