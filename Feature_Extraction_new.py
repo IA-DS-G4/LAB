@@ -63,8 +63,8 @@ def get_features():
         # get all seg folders for nodules later
 
 
-        #if scan is None: # if the scan is not available we continue
-        #    continue
+        if scan is None: # if the scan is not available we continue
+            continue
 
         nod = 1
         annot = 0
