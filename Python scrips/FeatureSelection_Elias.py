@@ -45,7 +45,7 @@ def get_malignancy_column_dtype(df):
     else:
         return "Column 'Malignancy' not found in the DataFrame."
 
-def f_selection_KBest(X,y,k=50):
+def f_selection_KBest(X,y,k=100):
     X_new = SelectKBest(f_classif, k=k).fit_transform(X, y)
     f_statistic, p_values = f_classif(X, y)
     print(f_statistic)
@@ -88,8 +88,8 @@ y = df["Category"]  # y is the "Catego# ry" column
 
 X_new, f_statistic, p_values = f_selection_KBest(X,y)
 
-
-
+X_new_df = pd.DataFrame(X_new)
+print(X_new_df)
 
 
 
@@ -99,5 +99,5 @@ X_new, f_statistic, p_values = f_selection_KBest(X,y)
 #sel.fit_transform(tot_data)
 #print(tot_data)
 
-df_norm.to_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\filewip.csv", index=False)
-
+X_new_df.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/X.csv", index=False)
+y.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/y.csv", index=False)
