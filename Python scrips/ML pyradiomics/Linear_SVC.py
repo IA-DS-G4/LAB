@@ -35,6 +35,7 @@ def LSVC(X,Y,epochs, test_size):
     plt.legend()
     plt.xlabel('epoch')
     plt.ylabel('accuracy')
+    plt.ylim(-0.05, 1.05)
     plt.axhline(mean_acc, color='red', linestyle='dashed', label='Mean accuracy')
     plt.show()
     return
