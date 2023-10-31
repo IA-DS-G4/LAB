@@ -48,12 +48,10 @@ def get_malignancy_column_dtype(df):
 def f_selection_KBest(X,y,k=100):
     X_new = SelectKBest(f_classif, k=k).fit_transform(X, y)
     f_statistic, p_values = f_classif(X, y)
-    print(f_statistic)
-    print(p_values)
     return X_new, f_statistic, p_values
 
-def f_selection_Percentile(X,y):
-    X_new = SelectPercentile(f_classif).fit_transform(X,y)
+def f_selection_Percentile(X,y,p=10):
+    X_new = SelectPercentile(f_classif, percentile=p).fit_transform(X,y)
     f_statistic, p_values = sklearn.feature_selection.f_classif(X,y)
     return X_new, f_statistic, p_values
 
@@ -86,14 +84,11 @@ df_norm = normalize_data(df)
 X = df_norm.drop(columns=["Category","Malignancy"])  # X contains all columns except "Category"
 y = df["Category"]  # y is the "Category" column
 
-X_new, f_statistic, p_values = f_selection_KBest(X,y)
+X_new, f_statistic, p_values = f_selection_Percentile(X,y)
 
 feature_select_plot(f_statistic,p_values)
 
 X_new_df = pd.DataFrame(X_new)
-print(X_new_df)
-
-
 
 
 #getting rid of features with low variance
