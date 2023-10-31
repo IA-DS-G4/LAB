@@ -4,13 +4,10 @@ from sklearn.feature_selection import VarianceThreshold
 
 #-loading data-> backup of 29/10/2023
 #pyradiomics data
-pr_data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\pyradiomicsBackup.csv")
-
-#pylidc data
-pl_data = pd.read_csv("../pylidc/pylidc_csv.csv")
+pr_data = pd.read_csv(r"../test/backup 29_10/pyradiomicsBackup.csv")
 
 #total obliteration data
-tot_data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\total_data_obliterationBackup.csv")
+tot_data = pd.read_csv(r"../test/backup 29_10/total_data_obliterationBackup.csv")
 
 
 
@@ -21,12 +18,12 @@ tot_data = tot_data.drop(tot_data[tot_data['Malignancy'] == 3].index)
 #code for dropping columns manually
 # 0-17, 19,20,21,22,23,27,28,29,30,31
 columns_to_drop = np.arange(1,11)
-columns_to_drop2 =  np.arange(12,29)
+columns_to_drop2 =  np.arange(12,30)
 columns_to_drop = np.append(columns_to_drop,  columns_to_drop2)
-print(columns_to_drop)
+columns_to_drop = np.append(columns_to_drop,  [32,33,34,35,36,40,41,42,45,46])
 #tot_data = pr_data.select_dtypes(include=[int, float])
 tot_data.drop(columns=tot_data.columns[columns_to_drop],inplace=True)
-tot_data.to_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\filewip.csv", index=False)
+tot_data.to_csv(r"../test/backup 29_10/filewip.csv", index=False)
 print(tot_data)
 
 
