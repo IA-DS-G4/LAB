@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
-from sklearn.feature_selection import VarianceThreshold
+import sklearn
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import f_classif
+from sklearn.feature_selection import SelectPercentile
 
 #-loading data-> backup of 29/10/2023
 #pyradiomics data
@@ -16,6 +21,8 @@ def cleaning_data(df):
     df = df.drop(df[df['Malignancy'] == 3].index)
     # Remove rows with NaN values in the "Malignancy" column
     df.dropna(subset=["Malignancy"], inplace=True)
+    threshold = df.shape[1] - 10  # 10 or more NaN values to be dropped
+    df = df.dropna(thresh=threshold)
     return df
 def normalize_data(df):
     normalized_data = (df-df.min())/(df.max()-df.min())
@@ -26,6 +33,8 @@ def create_category_column(df):
     df["Category"] = df["Malignancy"].apply(lambda x: 1 if x in [4, 5] else 0)
     # drop all categories which are not numerical
     df = df.select_dtypes(include=[int, float])
+    constant_columns = [col for col in df.columns if df[col].nunique() == 1]
+    df = df.drop(columns=constant_columns)
     return df
 
 def get_malignancy_column_dtype(df):
@@ -36,13 +45,54 @@ def get_malignancy_column_dtype(df):
     else:
         return "Column 'Malignancy' not found in the DataFrame."
 
+def f_selection_KBest(X,y,k=50):
+    X_new = SelectKBest(f_classif, k=k).fit_transform(X, y)
+    f_statistic, p_values = f_classif(X, y)
+    print(f_statistic)
+    print(p_values)
+    return X_new, f_statistic, p_values
+
+def f_selection_Percentile(X,y):
+    X_new = SelectPercentile(f_classif).fit_transform(X,y)
+    f_statistic, p_values = sklearn.feature_selection.f_classif(X,y)
+    return X_new, f_statistic, p_values
+
+def feature_select_plot(f_stat,p_val):
+    # Create a DataFrame to store and sort the F-statistic and p-values
+    results_df = pd.DataFrame({'F-Statistic': f_stat, 'p-Value': p_val})
+    results_df = results_df.sort_values(by='p-Value', ascending=True)
+    x_values = np.arange(0, len(f_stat), 1)
+
+    # Plot the sorted F-statistic and p-values
+    plt.figure(figsize=(12, 6))
+    plt.subplot(1, 2, 1)
+    plt.barh(x_values, results_df['F-Statistic'], color='b')
+    plt.xlabel('F-Statistic')
+    plt.title('F-Statistic')
+    plt.subplot(1, 2, 2)
+    plt.barh(x_values, -np.log10(results_df['p-Value']), color='g')
+    plt.xlabel('-log10(p-Value)')
+    plt.title('p-Values (log scale)')
+    plt.tight_layout()
+    plt.show()
+
 df = cleaning_data(df)
 get_malignancy_column_dtype(df)
 df = create_category_column(df)
 df_norm = normalize_data(df)
-print(df["Malignancy"])
-print(df["Category"])
-print(df_norm)
+
+
+# Creating the ML Dataset
+X = df.drop(columns=["Category"])  # X contains all columns except "Category"
+y = df["Category"]  # y is the "Catego# ry" column
+
+X_new, f_statistic, p_values = f_selection_KBest(X,y)
+
+
+
+
+
+
 
 #getting rid of features with low variance
 #sel = VarianceThreshold(threshold=0)
