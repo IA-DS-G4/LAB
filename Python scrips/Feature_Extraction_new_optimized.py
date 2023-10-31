@@ -47,6 +47,9 @@ def get_features():
         scan = pl.query(pl.Scan).filter(pl.Scan.patient_id == p_id).first()
         nods = scan.cluster_annotations()
 
+        if scan is None:  # if the scan is not available we continue
+            continue
+
         # path to the patient folder
         patient_dir = os.path.join(data_dir, str(p_id))
         # path to dicom ct-scans of patient
@@ -57,6 +60,14 @@ def get_features():
             shutil.rmtree(os.path.join(patient_dir, os.listdir(patient_dir)[0]))
             patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
             print("wrong folder removed!")
+            if len(os.listdir(patient_folders)) == 1 and len(os.listdir(patient_dir))==1:
+                thisdir = os.getcwd()
+                os.chdir(parent_dir)
+                # write to a log file the patient name, the seg folder name and the file name
+                log = open("log.txt", "a")
+                log.write("Failed to extract features from Patient, no files error: " + p_id + "\n")
+                os.chdir(thisdir)
+                continue
 
         # listing all the folders from a patient
         patient_seg_folders = os.listdir(patient_folders)
@@ -67,9 +78,6 @@ def get_features():
         # saving the dicom images folder path
         # get all seg folders for nodules later
 
-
-        #if scan is None: # if the scan is not available we continue
-        #    continue
 
         nod = 1
         annot = 0

@@ -42,6 +42,9 @@ def get_features():
         scan = pl.query(pl.Scan).filter(pl.Scan.patient_id == p_id).first()
         nods = scan.cluster_annotations()
 
+        if scan is None: # if the scan is not available we continue
+            continue
+
         # path to the patient folder
         patient_dir = os.path.join(data_dir, str(p_id))
         # path to dicom ct-scans of patient
@@ -61,10 +64,6 @@ def get_features():
         patient_seg_folders = os.listdir(patient_folders)
         # saving the dicom images folder path
         # get all seg folders for nodules later
-
-
-        if scan is None: # if the scan is not available we continue
-            continue
 
         nod = 1
         annot = 0
