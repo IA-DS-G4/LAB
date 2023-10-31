@@ -169,3 +169,5 @@ print(ann.id, ann.Malignancy)
 # => 4749, 'Highly Suspicious'
 
 print(anns.count())
+
+#%%

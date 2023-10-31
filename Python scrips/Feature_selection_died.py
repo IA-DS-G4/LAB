@@ -12,11 +12,20 @@ pl_data = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/pylidc
 #total obliteration data
 df = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/total_data_obliterationBackup.csv")
 
+def drop_columns(df):
+    #function for ropping columns manually
+    columns_to_drop = np.arange(0,10)
+    # columns_to_drop2 = np.arange(12,30)
+    # columns_to_drop = np.append(columns_to_drop,  columns_to_drop2)
+    columns_to_drop = np.append(columns_to_drop,  [11,12,13])
+    df.drop(columns=df.columns[columns_to_drop],inplace=True)
+    return df
 def cleaning_data(df):
     df = df.drop(df[df['Malignancy'] == 3].index)
     # Remove rows with NaN values in the "Malignancy" column
     df.dropna(subset=["Malignancy"], inplace=True)
     return df
+
 def normalize_data(df):
     normalized_data = (df-df.min())/(df.max()-df.min())
     return normalized_data
@@ -36,10 +45,12 @@ def get_malignancy_column_dtype(df):
     else:
         return "Column 'Malignancy' not found in the DataFrame."
 
+
 df = cleaning_data(df)
 get_malignancy_column_dtype(df)
 df = create_category_column(df)
 df_norm = normalize_data(df)
+#df_norm_form = drop_columns(df_norm)
 print(df["Malignancy"])
 print(df["Category"])
 print(df_norm)
@@ -50,4 +61,3 @@ print(df_norm)
 #print(tot_data)
 
 df_norm.to_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\backup 29_10\filewip.csv", index=False)
-
