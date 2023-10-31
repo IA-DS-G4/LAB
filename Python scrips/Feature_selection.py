@@ -12,20 +12,17 @@ tot_data = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/total
 
 
 #formtting of dataframe
-
 #drop row where malignancy is 3
 tot_data = tot_data.drop(tot_data[tot_data['Malignancy'] == 3].index)
 #code for dropping columns manually
 # 0-17, 19,20,21,22,23,27,28,29,30,31
-columns_to_drop = np.arange(1,11)
-columns_to_drop2 =  np.arange(12,30)
+columns_to_drop = np.arange(0,11)
+columns_to_drop2 = np.arange(12,30)
 columns_to_drop = np.append(columns_to_drop,  columns_to_drop2)
 columns_to_drop = np.append(columns_to_drop,  [32,33,34,35,36,39,40,41,44,45])
 #tot_data = pr_data.select_dtypes(include=[int, float])
 tot_data.drop(columns=tot_data.columns[columns_to_drop],inplace=True)
 tot_data.to_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/filewip.csv", index=False)
-print(tot_data)
-
 
 
 #normalizing data
