@@ -31,6 +31,8 @@ for s in scans:
     number_nodes=len(nods)
 
     for i,nod in enumerate(nods):
+        print('volume')
+        print(nod.to_volume())
         print(count)
         l= len(nods[i]) #number of anotations for each node
 
