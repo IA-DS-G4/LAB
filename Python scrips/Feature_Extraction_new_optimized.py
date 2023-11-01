@@ -55,20 +55,7 @@ def get_features():
         # path to dicom ct-scans of patient
         patient_dicom_path = scan.get_path_to_dicom_files()
 
-        patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
-        if len(os.listdir(patient_folders))==1:
-            shutil.rmtree(os.path.join(patient_dir, os.listdir(patient_dir)[0]))
-            patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
-            print("wrong folder removed!")
-            if len(os.listdir(patient_folders)) == 1 and len(os.listdir(patient_dir))==1:
-                thisdir = os.getcwd()
-                os.chdir(parent_dir)
-                # write to a log file the patient name, the seg folder name and the file name
-                log = open("log.txt", "a")
-                log.write("Failed to extract features from Patient, no files error: " + p_id + "\n")
-                os.chdir(thisdir)
-                continue
-
+        patient_folders = os.path.abspath(os.path.join(patient_dicom_path, os.pardir))
         # listing all the folders from a patient
         patient_seg_folders = os.listdir(patient_folders)
         for folder in patient_seg_folders:
