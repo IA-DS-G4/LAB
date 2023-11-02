@@ -9,13 +9,13 @@ from sklearn.feature_selection import SelectPercentile
 
 #-loading data-> backup of 29/10/2023
 #pyradiomics data
-pr_data = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/pyradiomicsBackup.csv")
+pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup 29_10/pyradiomicsBackup.csv")
 
 #pylidc data
-pl_data = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/pylidcBackup.csv")
+pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup 29_10/pylidcBackup.csv")
 
 #total obliteration data
-df = pd.read_csv("../Unsorted/Data files/CSV DATA FILES/backup 29_10/total_data_obliterationBackup.csv")
+df = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup 29_10/total_data_obliterationBackup.csv")
 
 def cleaning_data(df):
     df = df.drop(df[df['Malignancy'] == 3].index)

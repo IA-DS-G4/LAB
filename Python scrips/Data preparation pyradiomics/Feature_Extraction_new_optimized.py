@@ -4,16 +4,17 @@ import pandas as pd
 import os
 import shutil
 import time
+import subprocess
 
 def get_features():
     start_time = time.time()
     # put path of dataset here
-    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
-    patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698154951594/LIDC-IDRI"
+    parent_dir = r"/Images+seg/manifest-1698768984202"
+    patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698768984202/LIDC-IDRI"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
-    docker_save_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD"
+    docker_save_dir = r"/"
     # give the hash of the pyradiomnics docker
     docker_hash = r"d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01"
     # path to the features dict
@@ -21,9 +22,10 @@ def get_features():
     # pyradiomics save folder
     pyradiomics_midsave_path = r"/data/pyradiomics converter test"
     # temporal dir
-    temp_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file"
-    parameter_file = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Pyradiomics_Params_test.yaml"
-    data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\features.csv")
+    temp_dir = r"/test/temp file"
+    parameter_file = r"/test/Pyradiomics_Params_test.yaml"
+    data = pd.read_csv(r"/test/features.csv")
+    data = data.drop(0, axis=0)
     df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\nodule_counts_by_patient.xlsx")
     df = df.drop(df.columns[[4, 5]], axis=1)
     df.columns = ['Patient_ID', 'Total_Nodule_Count', 'NodG3','NodL3']
@@ -32,6 +34,9 @@ def get_features():
                  'Margin', 'Lobulation', 'Spiculation', 'Texture', 'Malignancy'])
     backup = 0
     iteration_counter = 1
+
+
+
     for p_id in df['Patient_ID']:
 
         print("Patient " + str(p_id) + "Processing")
@@ -42,7 +47,7 @@ def get_features():
         scan = pl.query(pl.Scan).filter(pl.Scan.patient_id == p_id).first()
         nods = scan.cluster_annotations()
 
-        if scan is None: # if the scan is not available we continue
+        if scan is None:  # if the scan is not available we continue
             continue
 
         # path to the patient folder
@@ -50,12 +55,7 @@ def get_features():
         # path to dicom ct-scans of patient
         patient_dicom_path = scan.get_path_to_dicom_files()
 
-        patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
-        if len(os.listdir(patient_folders))==1:
-            shutil.rmtree(os.path.join(patient_dir, os.listdir(patient_dir)[0]))
-            patient_folders = os.path.join(patient_dir, os.listdir(patient_dir)[0])
-            print("wrong folder removed!")
-
+        patient_folders = os.path.abspath(os.path.join(patient_dicom_path, os.pardir))
         # listing all the folders from a patient
         patient_seg_folders = os.listdir(patient_folders)
         for folder in patient_seg_folders:
@@ -64,6 +64,7 @@ def get_features():
         patient_seg_folders = os.listdir(patient_folders)
         # saving the dicom images folder path
         # get all seg folders for nodules later
+
 
         nod = 1
         annot = 0
@@ -78,24 +79,40 @@ def get_features():
 
                 # check how many files are in the segmentation folder
                 seg_files = os.listdir(seg_folder)
-                if len(seg_files) <= 0:
+                if len(seg_files) == 0:
                     # add a row with NaN values to the dataframe
                     data.loc[len(data)] = [None] * len(data.columns)
                 # iterating over each segmentation file
                 for file in os.listdir(seg_folder):
                     if file.endswith(".dcm"):
                         seg_file_path = os.path.join(seg_folder, file)
-                        print("docker run -v \"" + docker_save_dir + ":/data\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask --parameters \"/data/" + os.path.relpath(parameter_file, docker_save_dir).replace(chr(92),"/") + "\"")
-                        os.system("docker run -v \"" + docker_save_dir + ":/data\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask --parameters \"/data/" + os.path.relpath(parameter_file, docker_save_dir).replace(chr(92),"/") + "\"")
+                        #print("docker run -v \"" + docker_save_dir + ":/data\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask --parameters \"/data/" + os.path.relpath(parameter_file, docker_save_dir).replace(chr(92),"/") + "\"")
+                        #os.system("docker run -v \"" + docker_save_dir + ":/data\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask --parameters \"/data/" + os.path.relpath(parameter_file, docker_save_dir).replace(chr(92),"/") + "\"")
+                        docker_command = (
+                            f"docker run -v \"{docker_save_dir}:/data\" {docker_hash} "
+                            f"--input-image-dir \"/data/{os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92), '/')}\" "
+                            f"--input-seg-file \"/data/{os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92), '/')}\" "
+                            f"--output-dir \"{pyradiomics_midsave_path}\" "
+                            f"--volume-reconstructor dcm2niix "
+                            f"--features-dict \"/data/{os.path.relpath(features_dict, docker_save_dir).replace(chr(92), '/')}\" "
+                            f"--temp-dir \"/data/{os.path.relpath(temp_dir, docker_save_dir).replace(chr(92), '/')}\" "
+                            f"--correct-mask "
+                            f"--parameters \"/data/{os.path.relpath(parameter_file, docker_save_dir).replace(chr(92), '/')}\""
+                        )
+                        #print(docker_command)
+                        #running in parallel for better performance
+                        subprocess.run(docker_command, shell=True)
 
                         try:
-                            testdata = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file\Features\1.csv")
+                            testdata = pd.read_csv(r"/test/temp file/Features/1.csv")
+
                             #print(testdata)
                             # append data to features.csv
                             #print(data.info())
                             #data = data.append(testdata)
                             data = pd.concat([data, testdata], ignore_index=True)
                             #print(data)
+                            #if data.loc([0, 5])
 
 
                         except:
@@ -126,11 +143,11 @@ def get_features():
                 thisdir = os.getcwd()
 
                 # create a backup of the dataframes every 10 iterations (every 5 annotations)
-                if backup % 10 == 0:
+                if backup % 20 == 0:
                     current_time = time.time()
                     runtime = (current_time - start_time)/60
                     print('Iteration: ' + str(iteration_counter) + '-----Backup create------------time:' + str(runtime))
-                    os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Backups")
+                    os.chdir(r"/test/Backups")
 
                     data.to_csv("pyradiomicsBackup.csv", index=False)
                     dataframe.to_csv("pylidcBackup.csv", index=False)
@@ -152,9 +169,8 @@ def get_features():
     df1 = pd.read_csv("pylidc.csv")
     df2 = pd.read_csv("pyradiomics.csv")
 
-# concatenate the columns from both dataframes
+    # concatenate the columns from both dataframes
     df3 = pd.concat([df1, df2], axis=1)
-
     df3.to_csv("total_data_obliteration.csv", index=False)
 
 get_features()
