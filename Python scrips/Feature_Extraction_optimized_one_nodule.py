@@ -162,7 +162,7 @@ def get_features():
                 df3.to_csv("total_data_obliterationBackup.csv", index=False)
             os.chdir(thisdir)
 
-        nod += 1
+            nod += 1
     os.chdir(parent_dir)
 
     dataframe.to_csv("pylidc.csv", index=False)
