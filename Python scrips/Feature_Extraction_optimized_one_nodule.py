@@ -76,7 +76,6 @@ def get_features():
                 if "Nodule {}".format(nod) in folder:
                     seg_folder = os.path.join(patient_folders, folder)
                     break
-            backup += 1 #backupcounter
 
             iteration_counter += 1
 
