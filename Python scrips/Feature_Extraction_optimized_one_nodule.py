@@ -9,8 +9,8 @@ import subprocess
 def get_features():
     start_time = time.time()
     # put path of dataset here
-    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698154951594"
-    patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698154951594/LIDC-IDRI"
+    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698768984202"
+    patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698768984202/LIDC-IDRI"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
@@ -74,7 +74,7 @@ def get_features():
             for folder in patient_seg_folders:
                 if "Nodule {}".format(nod) in folder:
                     seg_folder = os.path.join(patient_folders, folder)
-                    continue
+                    break
             backup += 1 #backupcounter
 
             iteration_counter += 1
@@ -146,7 +146,7 @@ def get_features():
             thisdir = os.getcwd()
 
             # create a backup of the dataframes every 10 iterations (every 5 annotations)
-            if backup % 20 == 0:
+            if backup % 5 == 0:
                 current_time = time.time()
                 runtime = (current_time - start_time) / 60
                 print('Iteration: ' + str(iteration_counter) + '-----Backup create------------time:' + str(runtime))
