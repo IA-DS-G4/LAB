@@ -7,15 +7,16 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_classif
 from sklearn.feature_selection import SelectPercentile
 
-#-loading data-> backup of 29/10/2023
-#pyradiomics data
-pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pyradiomicsBackup.csv")
-
+#-loading data-> backup of 02/11/2023
 #pylidc data
-pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pylidcBackup.csv")
+pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_02_11_2023_afternoon/pylidcBackup.csv")
 
-# put all data together
-df_concat = pd.concat([pl_data, pr_data], axis=1)
+#pyradiomics data
+pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_02_11_2023_afternoon/pyradiomicsBackup.csv")
+
+#Combining pl and pr data
+df = pd.concat([pl_data, pr_data], axis=1)
+df.to_csv('../ML pyradiomics/total_data.csv')
 
 def cleaning_data(df):
     df = df.select_dtypes(include=[int, float])
