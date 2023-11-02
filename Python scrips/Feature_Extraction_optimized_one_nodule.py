@@ -136,7 +136,7 @@ def get_features():
             thisdir = os.getcwd()
 
             # create a backup of the dataframes every 15 iterations
-            if backup % 15 == 0:
+            if iteration_counter % 15 == 0:
                 current_time = time.time()
                 runtime = (current_time - start_time) / 60
                 print('Iteration: ' + str(iteration_counter) + '-----Backup create------------time:' + str(runtime))
