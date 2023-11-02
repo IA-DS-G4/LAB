@@ -9,13 +9,14 @@ from sklearn.feature_selection import SelectPercentile
 
 #-loading data-> backup of 29/10/2023
 #pyradiomics data
-#pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pyradiomicsBackup.csv")
+pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pyradiomicsBackup.csv")
 
 #pylidc data
-#pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pylidcBackup.csv")
+pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pylidcBackup.csv")
 
 #total obliteration data
-df = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/total_data_obliterationBackup.csv")
+
+df_concat = pd.concat([pl_data, pr_data], axis=1)
 
 def cleaning_data(df):
     df = df.select_dtypes(include=[int, float])

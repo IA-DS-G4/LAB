@@ -7,6 +7,7 @@ import time
 import subprocess
 
 def get_features():
+    ###################### put the working directories here ###################################
     start_time = time.time()
     # put path of dataset here
     parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698768984202"
@@ -24,6 +25,8 @@ def get_features():
     # temporal dir
     temp_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file"
     parameter_file = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Pyradiomics_Params_test.yaml"
+    ########################################################################################
+    # create dataframes for data storage
     data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\features.csv")
     data = data.drop(0, axis=0)
     df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\nodule_counts_by_patient.xlsx")
@@ -32,11 +35,10 @@ def get_features():
     dataframe = pd.DataFrame(
         columns=['Patient_ID', 'Nodule', ' Annotation', 'Subtlety', 'InternalStructure', 'Calcification', 'Sphericity',
                  'Margin', 'Lobulation', 'Spiculation', 'Texture', 'Malignancy'])
-    backup = 0
     iteration_counter = 1
 
 
-
+# We process each patient chronologically
     for p_id in df['Patient_ID']:
 
         print("Patient " + str(p_id) + "Processing")
@@ -47,28 +49,27 @@ def get_features():
         scan = pl.query(pl.Scan).filter(pl.Scan.patient_id == p_id).first()
         nods = scan.cluster_annotations()
 
-        if scan is None:  # if the scan is not available we continue
+        if scan is None:  # if the scan is not available, continue
             continue
 
         # path to the patient folder
         patient_dir = os.path.join(data_dir, str(p_id))
         # path to dicom ct-scans of patient
         patient_dicom_path = scan.get_path_to_dicom_files()
-
         patient_folders = os.path.abspath(os.path.join(patient_dicom_path, os.pardir))
         # listing all the folders from a patient
         patient_seg_folders = os.listdir(patient_folders)
+        # remove the unecessary evaluations folders
         for folder in patient_seg_folders:
             if "evaluations" in folder:
                 shutil.rmtree(os.path.join(patient_folders,folder))
         patient_seg_folders = os.listdir(patient_folders)
         # saving the dicom images folder path
-        # get all seg folders for nodules later
-
 
         nod = 1
         annot = 0
 
+        # find the first segmentation folder for each nodule
         for nodule in nods:
             ann = nodule[0]
             for folder in patient_seg_folders:
@@ -84,11 +85,10 @@ def get_features():
             if len(seg_files) == 0:
                 # add a row with NaN values to the dataframe
                 data.loc[len(data)] = [None] * len(data.columns)
-            # iterating over each segmentation file
+            # iterating over each nodule segmentation file
             for file in os.listdir(seg_folder):
                 if file.endswith(".dcm"):
                     seg_file_path = os.path.join(seg_folder, file)
-                    # print("docker run -v \"" + docker_save_dir + ":/data\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask --parameters \"/data/" + os.path.relpath(parameter_file, docker_save_dir).replace(chr(92),"/") + "\"")
                     # os.system("docker run -v \"" + docker_save_dir + ":/data\" " + docker_hash + " --input-image-dir \"/data/" + os.path.relpath(patient_dicom_path, docker_save_dir).replace(chr(92),"/") +  "\" --input-seg-file \"/data/" + os.path.relpath(seg_file_path, docker_save_dir).replace(chr(92),"/") + "\" --output-dir \"" + pyradiomics_midsave_path + "\" --volume-reconstructor dcm2niix --features-dict \"/data/" + os.path.relpath(features_dict, docker_save_dir).replace(chr(92),"/") + "\" --temp-dir \"/data/" + os.path.relpath(temp_dir, docker_save_dir).replace(chr(92),"/") + "\" --correct-mask --parameters \"/data/" + os.path.relpath(parameter_file, docker_save_dir).replace(chr(92),"/") + "\"")
                     docker_command = (
                         f"docker run -v \"{docker_save_dir}:/data\" {docker_hash} "
@@ -101,23 +101,13 @@ def get_features():
                         f"--correct-mask "
                         f"--parameters \"/data/{os.path.relpath(parameter_file, docker_save_dir).replace(chr(92), '/')}\""
                     )
-                    # print(docker_command)
                     # running in parallel for better performance
                     subprocess.run(docker_command, shell=True)
 
                     try:
                         testdata = pd.read_csv(
                             r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file\Features\1.csv")
-
-                        # print(testdata)
-                        # append data to features.csv
-                        # print(data.info())
-                        # data = data.append(testdata)
                         data = pd.concat([data, testdata], ignore_index=True)
-                        # print(data)
-                        # if data.loc([0, 5])
-
-
                     except:
                         # append a row with NaN values to the dataframe
                         data.loc[len(data)] = [None] * len(data.columns)
@@ -145,8 +135,8 @@ def get_features():
 
             thisdir = os.getcwd()
 
-            # create a backup of the dataframes every 10 iterations (every 5 annotations)
-            if backup % 5 == 0:
+            # create a backup of the dataframes every 15 iterations
+            if backup % 15 == 0:
                 current_time = time.time()
                 runtime = (current_time - start_time) / 60
                 print('Iteration: ' + str(iteration_counter) + '-----Backup create------------time:' + str(runtime))
@@ -155,11 +145,6 @@ def get_features():
                 data.to_csv("pyradiomicsBackup.csv", index=False)
                 dataframe.to_csv("pylidcBackup.csv", index=False)
 
-                df1 = pd.read_csv("pylidcBackup.csv")
-                df2 = pd.read_csv("pyradiomicsBackup.csv")
-
-                df3 = pd.concat([df1, df2], axis=1)
-                df3.to_csv("total_data_obliterationBackup.csv", index=False)
             os.chdir(thisdir)
 
             nod += 1
@@ -168,11 +153,5 @@ def get_features():
     dataframe.to_csv("pylidc.csv", index=False)
     data.to_csv("pyradiomics.csv", index=False)
 
-    df1 = pd.read_csv("pylidc.csv")
-    df2 = pd.read_csv("pyradiomics.csv")
-
-    # concatenate the columns from both dataframes
-    df3 = pd.concat([df1, df2], axis=1)
-    df3.to_csv("total_data_obliteration.csv", index=False)
 
 get_features()
