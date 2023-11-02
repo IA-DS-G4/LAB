@@ -21,7 +21,7 @@ accuracy = accuracy_score(y_test, predictions_rounded)
 print(accuracy)
 
 
-def LSVC(X,Y,epochs, test_size):
+def SGDR(X,Y,epochs, test_size):
     e = np.arange(0, epochs)
     acc_array = np.array([])
     for i in e:
@@ -47,4 +47,4 @@ def LSVC(X,Y,epochs, test_size):
     plt.show()
     return
 
-LSVC(X,Y,100, 0.1)
+SGDR(X,Y,100, 0.1)
