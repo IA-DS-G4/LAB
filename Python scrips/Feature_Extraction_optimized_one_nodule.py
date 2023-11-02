@@ -70,6 +70,7 @@ def get_features():
         annot = 0
 
         for nodule in nods:
+            ann = nodule[0]
             for folder in patient_seg_folders:
                 if "Nodule {}".format(nod) in folder:
                     seg_folder = os.path.join(patient_folders, folder)
