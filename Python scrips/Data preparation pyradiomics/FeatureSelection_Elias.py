@@ -14,8 +14,7 @@ pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023
 #pylidc data
 pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pylidcBackup.csv")
 
-#total obliteration data
-
+# put all data together
 df_concat = pd.concat([pl_data, pr_data], axis=1)
 
 def cleaning_data(df):
