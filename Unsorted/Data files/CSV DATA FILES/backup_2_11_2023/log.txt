@@ -1,0 +1,533 @@
+
+Patient LIDC-IDRI-0149Processing
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 3
+Total frames with unique IPP: 3
+Total overlapping frames: 0
+Origin: [-208.3, -200, -206.75]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 2
+Total frames with unique IPP: 2
+Total overlapping frames: 0
+Origin: [-208.3, -200, -206.75]
+Image too small to apply LoG filter, size: [25 25  3]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 2
+Total frames with unique IPP: 2
+Total overlapping frames: 0
+Origin: [-208.3, -200, -206.75]
+Image too small to apply LoG filter, size: [25 25  3]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 2
+Total frames with unique IPP: 2
+Total overlapping frames: 0
+Origin: [-208.3, -200, -206.75]
+Image too small to apply LoG filter, size: [25 25  3]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 2
+Total frames with unique IPP: 2
+Total overlapping frames: 0
+Origin: [-208.3, -200, -201.75]
+Image too small to apply LoG filter, size: [24 24  3]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 3
+Total frames with unique IPP: 3
+Total overlapping frames: 0
+Origin: [-208.3, -200, -184.25]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+Iteration: 1281-----Backup create------------time:700.3735835154852
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\Python scrips\Feature_Extraction_new_optimized.py:156: DtypeWarning: Columns (37,38,39,40,46) have mixed types. Specify dtype option on import or set low_memory=False.
+  df2 = pd.read_csv("pyradiomicsBackup.csv")
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 3
+Total frames with unique IPP: 3
+Total overlapping frames: 0
+Origin: [-208.3, -200, -184.25]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 3
+Total frames with unique IPP: 3
+Total overlapping frames: 0
+Origin: [-208.3, -200, -184.25]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 3
+Total frames with unique IPP: 3
+Total overlapping frames: 0
+Origin: [-208.3, -200, -184.25]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 474, in main
+    featureVector = extractor.execute(
+  File "/usr/local/lib/python3.9/dist-packages/radiomics/featureextractor.py", line 276, in execute
+    boundingBox, correctedMask = imageoperations.checkMask(image, mask, **_settings)
+  File "/usr/local/lib/python3.9/dist-packages/radiomics/imageoperations.py", line 275, in checkMask
+    raise ValueError('mask has too few dimensions (number of dimensions %d, minimum required %d)' % (ndims, minDims))
+ValueError: mask has too few dimensions (number of dimensions 1, minimum required 2)
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Image too small to apply LoG filter, size: [24 25  1]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+Row direction: 1 0 0
+Col direction: 0 1 0
+Z direction: 0 0 1
+Total frames: 2
+Total frames with unique IPP: 2
+Total overlapping frames: 0
+Origin: [-208.3, -200, -139.25]
+Image too small to apply LoG filter, size: [24 24  3]
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+E: DcmElement: Unknown Tag & Data (3f3c,6d78) larger (1702240364) than remaining bytes in file
+Condition failed: I/O suspension or premature end of stream in ../../apps/sr/tid1500writer.cxx:146
+terminate called after throwing an instance of 'int'
+Failed to move output SR!
+
+
+
+The system cannot find the file specified.
+C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\GITHUB\LAB\Python scrips\Feature_Extraction_new_optimized.py:134: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  data.loc[len(data)] = [None] * len(data.columns)
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+
+
+
+The system cannot find the file specified.
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+
+
+
+The system cannot find the file specified.
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a segmentation storage object since SOP class is: 1.2.840.10008.5.1.4.1.1.2
+Plane Orientation (Patient) is missing, cannot parse input 
+ERROR: Failed to get image directions!
+Fatal error encountered.
+Traceback (most recent call last):
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 605, in <module>
+    main()
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 450, in main
+    segmentationMetadataAccessor = SEGMetadataAccessor(args.inputSEG)
+  File "/usr/src/pyradiomics/labs/pyradiomics-dcm/pyradiomics-dcm.py", line 98, in __init__
+    raise ValueError(
+ValueError: SEGMetadataAccessor: DICOM object is not Segmentation!
+The system cannot find the file specified.
+
+
+
+dcmqi repository URL: git@github.com:QIICR/dcmqi.git revision: a33fa9e tag: v1.2.2
+E: Given file does not seem to be a se
