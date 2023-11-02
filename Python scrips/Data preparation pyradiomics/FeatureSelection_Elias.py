@@ -14,6 +14,8 @@ pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_02_11_202
 #pyradiomics data
 pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_02_11_2023_afternoon/pyradiomicsBackup.csv")
 
+
+
 #Combining pl and pr data
 df = pd.concat([pl_data, pr_data], axis=1)
 df.to_csv('../ML pyradiomics/total_data.csv')
