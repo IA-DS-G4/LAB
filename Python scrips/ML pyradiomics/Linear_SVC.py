@@ -5,8 +5,8 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 from matplotlib import pyplot as plt
 
-X = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/ML_Data/X.csv")
-Y = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/ML_Data/y.csv")
+X = pd.read_csv("X.csv")
+Y = pd.read_csv("y.csv")
 Y = Y.values.ravel()
 
 #The model

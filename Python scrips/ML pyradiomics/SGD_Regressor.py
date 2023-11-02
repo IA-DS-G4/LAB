@@ -5,8 +5,8 @@ from sklearn.linear_model import SGDRegressor
 from sklearn.metrics import accuracy_score
 from matplotlib import pyplot as plt
 
-X = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/ML_Data/X.csv")
-Y = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/ML_Data/y_alt.csv")
+X = pd.read_csv("X.csv")
+Y = pd.read_csv("y_alt.csv")
 
 #divide training and test data
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.1)

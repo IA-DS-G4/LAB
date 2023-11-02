@@ -9,15 +9,16 @@ from sklearn.feature_selection import SelectPercentile
 
 #-loading data-> backup of 29/10/2023
 #pyradiomics data
-pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup 29_10/pyradiomicsBackup.csv")
+#pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pyradiomicsBackup.csv")
 
 #pylidc data
-pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup 29_10/pylidcBackup.csv")
+#pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/pylidcBackup.csv")
 
 #total obliteration data
-df = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup 29_10/total_data_obliterationBackup.csv")
+df = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_2_11_2023/total_data_obliterationBackup.csv")
 
 def cleaning_data(df):
+    df = df.select_dtypes(include=[int, float])
     df = df.drop(df[df['Malignancy'] == 3].index)
     # Remove rows with NaN values in the "Malignancy" column
     df.dropna(subset=["Malignancy"], inplace=True)
@@ -97,6 +98,6 @@ X_new_df = pd.DataFrame(X_new)
 #sel.fit_transform(tot_data)
 #print(tot_data)
 
-X_new_df.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/X.csv", index=False)
-y.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/y.csv", index=False)
-y_alt.to_csv("../Unsorted/Data files/CSV DATA FILES/ML_Data/y_alt.csv", index=False)
+X_new_df.to_csv("../ML pyradiomics/X.csv", index=False)
+y.to_csv("../ML pyradiomics/y.csv", index=False)
+y_alt.to_csv("../ML pyradiomics/y_alt.csv", index=False)
