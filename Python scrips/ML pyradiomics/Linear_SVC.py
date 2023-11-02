@@ -31,7 +31,7 @@ def LSVC(X,Y,epochs, test_size):
     plt.plot(e, acc_array)
     plt.rcParams['font.size'] = '11'
     #plt.figure(figsize=(8, 6), dpi=1000)
-    plt.title('Accuracy per epoch ' + "Dataset size: " + str(len(X)))
+    plt.title('Accuracy per epoch ' + "Dataset size: " + str(len(X)) + ' Nodules')
     plt.legend()
     plt.xlabel('epoch')
     plt.ylabel('accuracy')
