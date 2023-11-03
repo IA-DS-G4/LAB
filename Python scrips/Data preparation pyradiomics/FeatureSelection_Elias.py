@@ -9,12 +9,10 @@ from sklearn.feature_selection import SelectPercentile
 
 #-loading data-> backup of 02/11/2023
 #pylidc data
-pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_02_11_2023_afternoon/pylidcBackup.csv")
+pl_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_03_11_2023_total/pylidc_total.csv")
 
 #pyradiomics data
-pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_02_11_2023_afternoon/pyradiomicsBackup.csv")
-
-
+pr_data = pd.read_csv("../../Unsorted/Data files/CSV DATA FILES/backup_03_11_2023_total/pyradiomics_total.csv")
 
 #Combining pl and pr data
 df = pd.concat([pl_data, pr_data], axis=1)
