@@ -87,6 +87,8 @@ X = df_norm.drop(columns=["Category","Malignancy"])  # X contains all columns ex
 y = df["Category"]  # y is the "Category" column
 y_alt = df["Malignancy"]
 
+print(X)
+
 X_new, f_statistic, p_values = f_selection_Percentile(X,y)
 
 feature_select_plot(f_statistic,p_values)
