@@ -40,22 +40,27 @@ def LSVC(X,Y,epochs, test_size):
     plt.show()
     return
 
-LSVC(X,Y,100, 0.2)
+#LSVC(X,Y,100, 0.1)
 
-X_all = pd.read_csv("Python scrips/ML pyradiomics/X_all_cleaned.csv")
-Y = pd.read_csv("Python scrips/ML pyradiomics/y_alt.csv")
-feature_prop = [3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+
+X_all = pd.read_csv("X_all_cleaned.csv")
+Y = pd.read_csv("y_alt.csv")
+Y = Y.values.ravel()
+first_30 = np.arange(1, 30, 1)
+last = np.arange(35, 100, 5)
+feature_prop = np.concatenate(first_30,last)
+print(feature_prop)
 acc_array = []
+test_size = 0.2
 for p in feature_prop:
     X_new, f_statistic, p_values = f_selection_Percentile(X_all, Y, p)
-    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=test_size, random_state=1)
+    X_train, X_test, y_train, y_test = train_test_split(X_new, Y, test_size=test_size, random_state=1)
     model = LinearSVC()
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
     acc_array = np.append(acc_array, accuracy)
-plt.plot(feature_prop, acc_array)
-
-
-
-
+plt.plot(feature_prop, acc_array, label='Amout features used vs accuracy {}'.format(feature_prop))
+plt.legend
+plt.ylim(0, 1)
+plt.show()
