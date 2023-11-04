@@ -40,5 +40,5 @@ def LSVC(X,Y,epochs, test_size):
     plt.show()
     return
 
-LSVC(X,Y,100, 0.2)
+LSVC(X,Y,100, 0.1)
 

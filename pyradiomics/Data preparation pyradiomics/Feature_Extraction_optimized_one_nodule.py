@@ -10,12 +10,12 @@ def get_features():
     ###################### put the working directories here ###################################
     start_time = time.time()
     # put path of dataset here
-    parent_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\Images+seg\manifest-1698768984202"
+    parent_dir = r"/Images+seg/manifest-1698768984202"
     patient_dicom_path_mounted = r"/data/Images+seg/manifest-1698768984202/LIDC-IDRI"
     # get path of LIDC-IDRI directionary
     data_dir = os.path.join(parent_dir, "LIDC-IDRI")
     # give directory where docker saves files
-    docker_save_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD"
+    docker_save_dir = r"/"
     # give the hash of the pyradiomnics docker
     docker_hash = r"d95ce08239e3182d8631d3492a5e4a32096d28285c3d2f10dd570d7e6d06fd01"
     # path to the features dict
@@ -23,11 +23,11 @@ def get_features():
     # pyradiomics save folder
     pyradiomics_midsave_path = r"/data/pyradiomics converter test"
     # temporal dir
-    temp_dir = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file"
-    parameter_file = r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Pyradiomics_Params_test.yaml"
+    temp_dir = r"/test/temp file"
+    parameter_file = r"/test/Pyradiomics_Params_test.yaml"
     ########################################################################################
     # create dataframes for data storage
-    data = pd.read_csv(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\features.csv")
+    data = pd.read_csv(r"/test/features.csv")
     data = data.drop(0, axis=0)
     df = pd.read_excel(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\nodule_counts_by_patient.xlsx")
     df = df.drop(df.columns[[4, 5]], axis=1)
@@ -105,7 +105,7 @@ def get_features():
 
                     try:
                         testdata = pd.read_csv(
-                            r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\temp file\Features\1.csv")
+                            r"/test/temp file/Features/1.csv")
                         data = pd.concat([data, testdata], ignore_index=True)
                     except:
                         # append a row with NaN values to the dataframe
@@ -139,7 +139,7 @@ def get_features():
                 current_time = time.time()
                 runtime = (current_time - start_time) / 60
                 print('Iteration: ' + str(iteration_counter) + '-----Backup create------------time:' + str(runtime))
-                os.chdir(r"C:\Users\Diederik\OneDrive\Bureaublad\studie tn\Minor vakken Porto\IA CAD\test\Backups")
+                os.chdir(r"/test/Backups")
 
                 data.to_csv("pyradiomicsBackup.csv", index=False)
                 dataframe.to_csv("pylidcBackup.csv", index=False)
